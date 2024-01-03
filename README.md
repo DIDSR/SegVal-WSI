@@ -51,8 +51,28 @@ For the second ROI, since two of the class labels are absent in the ground truth
 
 For the third ROI, since one of the class labels is absent in the ground truth annotation, a Dice score of “NaN” is assigned for that class and Dice score values of 0.9189 and 0.9445 are obtained for the other two classes.
 
+# Calculating Dice-Score for the Entire Set of Whole Slide Images
+We discuss three methods of obtaining a Dice score for the entire set of whole slide images.
+
+Method 1 (Pixel-Level aggregation): In the first method, we aggregate all the confusion matrices   across all the ROIs and across all the WSIs to obtain one confusion matrix (CM, Equation 1). From this confusion matrix, CM  , a Dice score can be obtained. This method weighs all the pixels across all the ROIs and across all the whole slide images equally when aggregating all the confusion matrices (cmij) into a single confusion matrix (CM): 
+![image](https://github.com/DIDSR/SegVal-WSI/assets/68286434/358b63c7-26fc-4b7c-8d32-58576d64816b)
+
+Here, F<sub>DICE</sub> (CM) is the Dice score values obtained from the confusion matrix (CM).
+
+Method 2 (ROI-Level Analysis): In the second method, we first calculate a Dice score for each of the ROIs (Diceij is the Dice score of the jth ROI of the ith WSI obtained from the confusion matrix cmij). We then average all the Dice scores across all the ROIs in all the WSIs  . This method weighs all the ROIs across all the WSIs equally, Equation 2:
+![image](https://github.com/DIDSR/SegVal-WSI/assets/68286434/8280ec96-904e-475d-94c1-9e411effb04c)
+
+Method 3 (Slide-Level Analysis): In the third method, we first calculate a Dice score for each WSI   (Dicei is the Dice score of the ith whole slide image). We then average all the Dice scores across all WSIs. This method weighs all the WSIs equally, Equation 3:
+![image](https://github.com/DIDSR/SegVal-WSI/assets/68286434/98077c57-bf4b-4937-ac5e-4ba19354f58c)
+However, a Dice score for the whole slide image can be obtained in two different ways: firstly, by weighing all the pixels across an entire whole slide image equally, Equation (3a), and secondly, by weighing all the ROIs across an entire whole slide image equally, Equation (3b):
+![image](https://github.com/DIDSR/SegVal-WSI/assets/68286434/7d336ac4-8e60-4201-bf93-6842ab300058)
+
+Confidence Intervals
+To calculate the confidence intervals for the point estimates of the Dice metric we use the bootstrap method. To obtain one bootstrap sample, we randomly sample N WSIs with replacement from the original pool of the N WSIs in the test dataset. Each time a WSI is sampled from the pool of the N slides, all the ROIs of that slide is also selected. As a result, the three methods discussed above could be used to obtain Dice scores for the bootstrap sample. We repeat this bootstrap sampling k times (e.g., k = 5000) to obtain k estimates Dice score values. From these Dice scores, lower and upper bounds of the confidence interval at different confidence levels could be obtained. 
 
 
+# Installation
 
+The software package has been tested with Python 3.#.#. Required packages include “NumPy”, “Matplotlib” and “tqdm” that can be installed as follows:
 
-
+pip install numpy matplotlib tqdm
