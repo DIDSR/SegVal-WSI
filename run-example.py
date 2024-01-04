@@ -33,7 +33,7 @@ import matplotlib.pyplot as plt
 plt.imshow(img)
 plt.imshow(gt)
 plt.imshow(pred)
-plt.imshow()
+plt.plot()
 
 from calculate_cm import calculate_cm
 cm_roi = calculate_cm(gt, pred, number_of_classes=3)
