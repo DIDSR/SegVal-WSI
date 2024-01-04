@@ -23,4 +23,4 @@ def plot_dice_values(point_estimate, dice_lb, dice_ub):
         plt.xticks(ticks = np.arange(4), labels = ['Method 1','Method 2','Method 3a','Method 3b'],rotation = 45)
         plt.ylabel('Final Dice Score Values')
         plt.title('Class '+str(i))
-        plt.imshow()
+        plt.plot()
