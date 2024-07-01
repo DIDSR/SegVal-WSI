@@ -11,7 +11,7 @@ Figure 1. Left hand side shows the entire whole slide image usually with a size 
 
 After training a segmentation algorithm, these algorithms should be properly evaluated. As discussed previously, providing segmentation annotations in the entire tissue region of a whole slide image is not feasible. Instead, several ROIs are annotated. It is critically important to have proper test methodologies for aggregation when evaluating the performance of segmentation algorithms in digital pathology applications.
 
-Note: We assume that the segmentation reference standard is already obtained   through an established method in selected ROIs   of a set of whole slide images and we only focus on evaluating the performance of the segmentation algorithms as compared to these reference standard annotations.
+Note: We assume that the segmentation reference standard is already obtained   through an established method in selected ROIs   across a set of whole slide images and we only focus on evaluating the performance of these segmentation algorithms as compared to the reference standard annotations.
 
 References 
 1) Janowczyk A, Madabhushi “A. Deep learning for digital pathology image analysis: A comprehensive tutorial with selected use cases”. J Pathol Inform. 2016; 7:29. Jul 26, 2023.
