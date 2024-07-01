@@ -5,7 +5,7 @@ Applications of deep-learning (DL) algorithms in digital pathology have been in 
 
 With the segmentation annotations (in the form of segmentation masks) manually delineated by expert clinicians, a DL algorithm could be trained to automatically segment the tissue into tumoral and stromal regions. However, it is very burdensome and even infeasible to obtain segmentation annotations in the entire tissue regions of a WSI. This is due to the sheer size of WSIs in digital pathology applications in the range of 100,000 pixels in each of the two dimensions. Hence, a common practice is to select several regions of interests (ROIs) for segmentation annotations. As a result, segmentation annotations are obtained across several whole slide images, each containing several ROIs annotated in different locations. 
 
-One example is shown in the figure below wherein three ROIs in a single WSI are annotated by expert clinicians to train a segmentation algorithm.
+One example is shown in the figure below wherein three ROIs in a single WSI are annotated by expert clinicians to train/test a segmentation algorithm.
  ![image](https://github.com/DIDSR/SegVal-WSI/assets/68286434/01fb2f4e-cc03-41a7-829a-784efa015606)
 Figure 1. Left hand side shows the entire whole slide image usually with a size on the order of 100,000 by 100,000 pixels. Three selected ROIs are chosen and annotated. One ROI is shown on the right-hand side with the segmentation mask highlighting different tissue regions (image courtesy: https://tiger.grand-challenge.org).
 
