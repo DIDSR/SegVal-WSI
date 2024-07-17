@@ -76,3 +76,5 @@ The software package has been tested with Python 3.#.#. Required packages includ
 ```
 pip install numpy matplotlib tqdm
 ```
+# Contact
+For any questions/suggestions/collaborations, please contact Arian Arab either via this GitHub repo or via email (arian.arab@fda.hhs.gov).
