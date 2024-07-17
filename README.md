@@ -29,23 +29,23 @@ For each ROI, a reference segmentation mask is obtained. The reference segmentat
 
 ## Calculating Dice-Score from the Confusion Matrix  
 For a C-class segmentation task, by comparing the reference standard annotations to the algorithm’s outputs, a confusion matrix of dimensions C×C can be obtained. From the confusion matrix, for each class, a Dice score can be calculated. 
-In a one-versus-the-rest approach, a class is defined as positive and the rest as negative, and a 2×2 confusion matrix can be obtained for each of the C classes. From the 2×2 confusion matrix, a Dice score   for the positive class can be obtained (TP, FP, FN, and TN are obtained by comparing the algorithm’s predictions and the ground truth labels at the pixel level):
+In a one-versus-the-rest approach, a class is defined as positive and the rest as negative, and a 2×2 confusion matrix can be obtained for each of the C classes. From the 2×2 confusion matrix, a Dice score for the positive class can be obtained (TP, FP, FN, and TN are obtained by comparing the algorithm’s predictions and the ground truth labels at the pixel level):
 
 ![image](https://github.com/DIDSR/SegVal-WSI/assets/68286434/865e9873-9043-4aac-868a-d7c084a4e7e4)
 
 For each of the class labels, a Dice score can be obtained. If the reference standard annotations contain the positive class, a Dice score is obtained; otherwise, a Dice score is not assigned for that specific class (NaN). 
 
-For example, an ROI in a single WSI is shown below. The segmentation annotations contain three different class labels (C=3, with label values of 0, 1, and 2). As a result, three Dice score values for each of the class labels are obtained:
+For example, an ROI in a single WSI is shown below. The segmentation annotations contain three different class labels (C=3, with label values of 0, 1, and 2). As a result, three Dice scores for each of the class labels are obtained:
 ![image](https://github.com/DIDSR/SegVal-WSI/assets/68286434/1212cfba-34e1-4253-8b03-c115b0405022)
 
-As another example, three ROIs in a single whole slide image, along with the reference standard annotations and the algorithm’s predictions are shown in the figure below. As can be seen, for each of the ROIs, a confusion matrix can be obtained and since this is a 3-class segmentation task, for each of the class labels and for each of the ROIs a Dice score value can be obtained:
+As another example, three ROIs in a single whole slide image, along with the reference standard annotations and the algorithm’s predictions are shown in the figure below. As can be seen, for each of the ROIs, a confusion matrix can be obtained and since this is a 3-class segmentation task, for each of the class labels and for each of the ROIs a Dice score can be obtained:
 ![image](https://github.com/DIDSR/SegVal-WSI/assets/68286434/288ae780-3f53-4f4e-8b28-32deefa95c6c)
 
-As can be seen from the figure above, for the first ROI, the reference standard annotations contain all the three class labels and hence three Dice score values are obtained for each of the three class labels (Dice score values of 0.0138, 0.8636, 0.8358).
+As can be seen from the figure above, for the first ROI, the reference standard annotations contain all the three class labels and hence three Dice scores are obtained for each of the three class labels (Dice scores of 0.0138, 0.8636, 0.8358).
 
-For the second ROI, since two of the class labels are absent in the reference standard annotations, for these classes, Dice score values are not assigned (“NaN” values). A Dice score value of 0.4797 is obtained for the class shown with the red mask.
+For the second ROI, since two of the class labels are absent in the reference standard annotations, for these classes, Dice scores are not assigned (“NaN” values). A Dice score of 0.4797 is obtained for the class shown with the red mask.
 
-For the third ROI, since one of the class labels is absent in the reference standard annotation, a Dice score of “NaN” is assigned for that class and Dice score values of 0.9189 and 0.9445 are obtained for the other two classes.
+For the third ROI, since one of the class labels is absent in the reference standard annotation, a Dice score is not assigned for that class ("NaN" value) and Dice scores of 0.9189 and 0.9445 are obtained for the other two classes.
 
 ## Calculating Dice-Score for the Entire Set of Whole Slide Images
 We discuss three methods of obtaining a Dice score for the entire set of whole slide images.
