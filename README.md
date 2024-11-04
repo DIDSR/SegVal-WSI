@@ -68,6 +68,9 @@ However, a Dice score for the whole slide image can be obtained in two different
 ## Confidence Intervals
 To calculate confidence intervals we use the bootstrap method. To obtain one bootstrap sample, we randomly sample N WSIs with replacement from the original pool of the N WSIs in the test dataset. Each time we select a WSI from the pool of the N whole slide images, all the ROIs of that slide is also selected. As a result, the three methods discussed above could be used to obtain Dice scores for the bootstrapped samples as well. We repeat this bootstrap sampling k times (e.g., k = 5000). From the distribution of Dice scores across these k samples, lower and upper bounds of confidence interval at different confidence levels could be obtained. 
 
+# Usage
+
+Inputs/Outputs requirements to the software tool as well as the Inputs/Outputs to each of the functions within the software are described in the "User Manual" document. Please refer to this document for a full descirpiton of each of the functions and the software tool usage.
 
 # Installation
 
