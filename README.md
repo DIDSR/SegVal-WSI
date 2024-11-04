@@ -21,8 +21,7 @@ References
 
 # Method Description
 
-We briefly describe the methods in this tool to evaluate performance of segmentation algorithms applied to digital pathology whole slide image applications. For an extended review of the methods and performance results refer to the following: 
-Reference (TiGER Paper). 
+We briefly describe the methods in this tool to evaluate performance of segmentation algorithms applied to digital pathology whole slide image applications. 
 
 We assume that the test dataset contains N WSIs from N patients with one WSI per patient (i=1,2, ...N, where i is the index of the ith WSI and N is the total number of WSIs). Each WSI contains a number of ROIs annotated (M<sub>1</sub>, M<sub>2</sub>, M<sub>3</sub>, …  where M<sub>i</sub> is the number of ROIs annotated for the ith WSI, the total number of ROIs annotated across the entire set of WSIs is M= ∑M<sub>i</sub>). 
 For each ROI, a reference segmentation mask is obtained. The reference segmentation masks will be compared to the algorithm-generated segmentation masks. If the segmentation algorithm is designed to segment the tissue into C classes,   for each ROI, a C×C confusion matrix can be obtained, and a Dice score for each of the C class labels can be found (cm<sub>ij</sub> refers to the confusion matrix of the j<sup>th</sup> ROI of the i<sup>th</sup> whole slide image).
