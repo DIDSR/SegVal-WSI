@@ -1,1 +1,1 @@
-This folder contains a example python code ("run-example.py") how to use the software tool. Sample confusion matrices for a set of whole slide images (WSIs) annotated acorss several regions of interests (ROIs) are provided.
+This folder contains a example python code ("run-example.py") to guide the users how to use the software tool. Sample confusion matrices for a set of WSIs annotated acorss several ROIs are provided.
