@@ -1,1 +1,1 @@
-
+This folder contains codes to calculate confusion matrices as well as the Dice point estimates along with their confidence intervals for a segmnetation task for a set of WSIs annotated across several regions of interests (ROIs). For a full description of methods and codes (inputs/outputs to each of the functions) please refer to the "User Manual.pdf" document.
