@@ -72,7 +72,7 @@ To calculate confidence intervals we use the bootstrap method. To obtain one boo
 
 Inputs/Outputs requirements to the software tool as well as each of the functions within the software tool are described in the "User Manual.pdf" document. Please refer to this document for a full descirpiton of the software tool and its usage. 
 
-The "run-example.py" function contains an example code how to use the software to generate Dice score point-estimates as well as confidence intervals for a set of WSIs annotated across several ROIs.
+The "run-example.py" function wihtin the "example" folder, contains an example code how to use the software tool to generate Dice score point-estimates as well as confidence intervals for a set of WSIs annotated across several ROIs.
 
 # Installation
 
